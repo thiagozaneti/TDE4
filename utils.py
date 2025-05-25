@@ -48,12 +48,6 @@ def atualizar_cliente(cpf, novo_nome, novo_telefone, novo_endereco):
     if not validar_entrada_vazia(cpf, novo_endereco, novo_nome, novo_telefone):
         print("Erro, entradas vázias")
         return
-    if not validar_telefone(telefone=novo_telefone):
-        print("Erro, telefone errado")
-        return
-    if not validar_cpf(cpf=cpf):
-        print("Erro, cpf inválido")
-        return
     for cliente in clientes:
         if cliente[0] == cpf:
             cliente[1] = novo_nome or cliente[1]
