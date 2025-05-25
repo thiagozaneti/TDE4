@@ -1,7 +1,12 @@
 from validacoes import validar_cpf, validar_entrada_vazia, validar_telefone
 clientes = [] 
+##esse vetor clientes é uma matriz, já que adiciono nele 4 informações [[nome][cpf][telefone][endereco]]
+##isso no entanto fica assim: 
+##[[nome][cpf][telefone][endereco]]
+##[[nome][cpf][telefone][endereco]]
+##[[nome][cpf][telefone][endereco]]
 
-
+##verifica se a entrada nao está vazia, telefone e cpf, ai sim a função adiciona as informações na matriz
 def adicionar_cliente(cpf, nome, telefone, endereco):
     if not validar_entrada_vazia(telefone,nome,endereco,cpf):
         print("Erro, entradas vázias")
@@ -19,6 +24,8 @@ def adicionar_cliente(cpf, nome, telefone, endereco):
     clientes.append([cpf, nome, telefone, endereco])
     print("Cliente adicionado com sucesso.")
 
+
+##busca pelo cpf e remove
 def excluir_cliente(cpf):
     if not validar_cpf(cpf=cpf):
         print("Erro, cpf inválido")
@@ -44,6 +51,8 @@ def consultar_cliente(cpf):
             return
     print("Cliente não encontrado.")
 
+
+##atualiza o cliente após verificar as entradas
 def atualizar_cliente(cpf, novo_nome, novo_telefone, novo_endereco):
     if not validar_entrada_vazia(cpf, novo_endereco, novo_nome, novo_telefone):
         print("Erro, entradas vázias")
