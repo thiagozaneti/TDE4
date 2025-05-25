@@ -1,5 +1,6 @@
 from utils import adicionar_cliente, atualizar_cliente, consultar_cliente, excluir_cliente, clientes
 
+
 def menu():
     while True:
         print("\n--- MENU CLIENTES ---")
@@ -12,11 +13,11 @@ def menu():
         opcao = input("Escolha uma opção: ")
 
         if opcao == '1':
-            nome = input("Nome: ")
-            cpf = input("CPF (somente números): ")
-            telefone = input("Telefone: ")
-            endereco = input("Endereço: ")
-            adicionar_cliente(cpf=cpf, nome = nome, telefone= telefone, endereco= endereco)
+            nome_add = input("Nome: ")
+            cpf_add = input("CPF (somente números): ")
+            telefone_add = input("Telefone: ")
+            endereco_add = input("Endereço: ")
+            adicionar_cliente(cpf=cpf_add, nome = nome_add, telefone= telefone_add, endereco= endereco_add)
             for i in clientes:
                 print(i)
             
